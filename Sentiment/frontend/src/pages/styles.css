@@ -1,0 +1,26 @@
+.main-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .sentiment {
+    background-color: #ffebcc;
+  }
+  
+  .report {
+    background-color: #ccffcc;
+  }
+  
+  .product {
+    background-color: #cce5ff;
+  }
