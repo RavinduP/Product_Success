@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladder Sales Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ladder Sales Prediction</h1>
+
+        <form id="predictForm">
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required><br><br>
+
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required><br><br>
+
+            <label for="material_code">Material Code:</label>
+            <input type="text" id="material_code" name="material_code" required><br><br>
+
+            <label for="sales_region">Sales Region:</label>
+            <input type="text" id="sales_region" name="sales_region" required><br><br>
+
+            <button type="submit">Get Prediction</button>
+        </form>
+
+        <div id="output">
+            <h2>Predicted Sales:</h2>
+            <p id="predictionResult"></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#predictForm").submit(function(e) {
+                e.preventDefault();
+
+                // Get input values
+                var start_date = $("#start_date").val();
+                var end_date = $("#end_date").val();
+                var material_code = $("#material_code").val();
+                var sales_region = $("#sales_region").val();
+
+                // Prepare the data for API request
+                var requestData = {
+                    start_date: start_date,
+                    end_date: end_date,
+                    "Material Code": material_code,
+                    "Sales Region": sales_region
+                };
+
+                // Make the API request
+                $.ajax({
+                    url: "http://127.0.0.1:5000/predict_range", // Your backend API URL
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(requestData),
+                    success: function(response) {
+                        // Display the prediction result
+                        if (response.error) {
+                            $("#predictionResult").text("Error: " + response.error);
+                        } else {
+                            $("#predictionResult").text("Predicted Total Sales from " + response.start_date + " to " + response.end_date + ": " + response.predicted_total_sales);
+                        }
+                    },
+                    error: function() {
+                        $("#predictionResult").text("An error occurred while fetching the prediction.");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
