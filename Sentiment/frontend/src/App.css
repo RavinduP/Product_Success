@@ -28,6 +28,71 @@
   color: #61dafb;
 }
 
+
+.csv-upload-container {
+  text-align: left;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  text-align: left;
+  margin-left: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.summary-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.summary-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.summary-container li {
+  background: #eef;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
