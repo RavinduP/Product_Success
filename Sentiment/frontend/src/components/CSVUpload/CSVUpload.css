@@ -24,7 +24,6 @@
   gap: 16px;
 }
 
-/* Heading */
 .csv-upload-container h2 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -120,7 +119,6 @@ button:hover {
   margin-top: 5px;
 }
 
-/* Animation for success message fade out */
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: 0; }
