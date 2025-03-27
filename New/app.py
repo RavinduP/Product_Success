@@ -137,11 +137,12 @@ def load_campaign_data():
     df['Month'] = df['Date'].dt.month
     df['Day'] = df['Date'].dt.day
     df = df.drop('Date', axis=1)
-    df['Duration'] = df['Duration'].str.extract('(\d+)').astype(int)
+    df['Duration'] = df['Duration'].str.extract(r'(\d+)').astype(int)
 
     encoder = OneHotEncoder(drop='first', sparse_output=False, handle_unknown='ignore')
     ad_type_encoded = encoder.fit_transform(df[['Ad_Type']])
-    df[encoder.get_feature_names_out(['Ad_Type'])] = ad_type_encoded
+    ad_type_columns = encoder.get_feature_names_out(['Ad_Type'])
+    df[ad_type_columns] = ad_type_encoded
     df = df.drop('Ad_Type', axis=1)
 
     X = df.drop('Campaign_Type', axis=1)
@@ -161,10 +162,6 @@ def train_campaign_model():
     numeric_cols = X.select_dtypes(include=np.number).columns
     X_res[numeric_cols] = scaler.fit_transform(X_res[numeric_cols])
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X_res, y_res, test_size=0.3, random_state=42, stratify=y_res
-    )
-
     param_grid = {
         'n_estimators': [100, 200],
         'max_depth': [5, 10],
@@ -174,13 +171,23 @@ def train_campaign_model():
         'class_weight': ['balanced']
     }
 
-    model = GridSearchCV(
-        RandomForestClassifier(random_state=42),
-        param_grid,
-        cv=StratifiedKFold(10, shuffle=True, random_state=42),
+    cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+
+    grid_search = GridSearchCV(
+        estimator=RandomForestClassifier(random_state=42),
+        param_grid=param_grid,
+        cv=cv,
         scoring='accuracy',
         n_jobs=-1
-    ).fit(X_train, y_train).best_estimator_
+    )
+
+    grid_search.fit(X_res, y_res)
+
+    model = grid_search.best_estimator_
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_res, y_res, test_size=0.3, random_state=42, stratify=y_res
+    )
 
     # Calculate metrics
     y_pred_train = model.predict(X_train)
