@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Type Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Campaign Type Predictor</h1>
+        <form id="campaignForm">
+            <!-- Duration -->
+            <div class="form-group">
+                <label for="duration">Duration (in days):</label>
+                <input type="number" id="duration" name="duration" required>
+                <span class="error" id="durationError"></span>
+            </div>
+
+            <!-- Ad Budget -->
+            <div class="form-group">
+                <label for="adBudget">Ad Budget:</label>
+                <input type="number" id="adBudget" name="adBudget" required>
+                <span class="error" id="adBudgetError"></span>
+            </div>
+
+            <!-- Reach -->
+            <div class="form-group">
+                <label for="reach">Reach:</label>
+                <input type="number" id="reach" name="reach" required>
+                <span class="error" id="reachError"></span>
+            </div>
+
+            <!-- Clicks -->
+            <div class="form-group">
+                <label for="clicks">Clicks:</label>
+                <input type="number" id="clicks" name="clicks" required>
+                <span class="error" id="clicksError"></span>
+            </div>
+
+            <!-- Impressions -->
+            <div class="form-group">
+                <label for="impressions">Impressions:</label>
+                <input type="number" id="impressions" name="impressions" required>
+                <span class="error" id="impressionsError"></span>
+            </div>
+
+            <!-- Ad Type -->
+            <div class="form-group">
+                <label for="adType">Ad Type:</label>
+                <select id="adType" name="adType" required>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google Ads">Google Ads</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Website">Website</option>
+                    <option value="YouTube">YouTube</option>
+                </select>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date">Date (Month and Year):</label>
+                <input type="month" id="date" name="date" required>
+                <span class="error" id="dateError"></span>
+            </div>
+            
+            <button type="submit">Predict Campaign Type</button>
+        </form>
+        <h2>Prediction Result:</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
