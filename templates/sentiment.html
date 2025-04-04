@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis | SwissTek</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/sentiment/sentiment.css">
+</head>
+
+<body>
+    <div class="sidebar-container"></div>
+
+    <div class="sentiment-container">
+        
+        <div class="title"><h2>Sentiment Analysis</h2></div>
+
+        <div class="main-content">
+
+            <!-- Upload Card -->
+            <div class="upload-card">
+                <div class="card-header">
+                    <h2>Upload Feedback</h2>
+                </div>
+                <div class="card-body">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="fileInput" accept=".csv" hidden>
+                        <div class="drop-area" id="dropArea">
+                            <i class="fas fa-file-upload"></i>
+                            <p>Drag & drop your CSV file here or click to browse</p>
+                            <button class="browse-btn" onclick="document.getElementById('fileInput').click()">
+                                Select File
+                            </button>
+                        </div>
+                        <div class="file-preview" id="filePreview">
+                            <div class="file-info">
+                                <span id="fileName"></span>
+                                <span class="file-remove" id="fileRemove"><i class="fas fa-times"></i></span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="uploadProgress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="swisstek-btn analyze-btn" id="analyzeBtn" onclick="uploadCSV()" disabled>
+                        <span class="btn-text" id="analyzeText">Analyze Sentiment</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Card -->
+            <div class="results-card" id="resultsCard">
+                <div class="card-header">
+                    <button class="download-btn" id="downloadPdf">
+                        <i class="fas fa-file-pdf"></i> Download Report
+                    </button>
+                </div>
+                <div class="card-body">
+
+                    <!-- Summary Section -->
+                    <div class="summary-section">
+                        <div class="summary-placeholder" id="summaryPlaceholder">
+                            <p>Upload a CSV file to see analysis results</p>
+                        </div>
+                        <div class="summary-results" id="summaryResults"></div>
+                    </div>
+
+                    <!-- Chart Section -->
+                    <div class="chart-container">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+
+                    <!-- Sample Results -->
+                    <div class="sample-container" id="sampleResults"></div>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    <script src="../static/sidebar/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="../static/sentiment/sentiment.js"></script>
+</body>
+</html>

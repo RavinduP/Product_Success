@@ -1,0 +1,178 @@
+:root {
+    --swisstek-blue: #005fae;
+    --swisstek-dark: #1a2930;
+    --swisstek-accent: #e74c3c;
+    --swisstek-light: #f5f7fa;
+    --swisstek-green: #27ae60;
+    --swisstek-black: #000000;
+    --swisstek-hover: #ce6559;
+    --swisstek-gray: #e0e0e0;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-image: url('../../resource/img/bg3.png');
+}
+
+.sales-container {
+    margin-top: 100px;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0%;
+}
+
+.title {
+    background-color: var(--swisstek-dark);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.title h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: var(--swisstek-accent);
+    color: white;
+    border-radius: var(--card-radius) var(--card-radius) 0 0 !important;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+    height: 500px;
+}
+
+.col-lg-4 .card-body{
+    height: 600px;
+}
+
+/* Form Styles */
+.form-select, .form-control {
+    border: 1px solid var(--swisstek-gray);
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--swisstek-accent);
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--swisstek-dark);
+}
+
+.btn-primary {
+    background: none;
+    border: 1px solid var(--swisstek-accent);
+    color: var(--swisstek-accent);
+    margin-top: 2%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--swisstek-accent);
+    color: white;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: var(--swisstek-dark);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: var(--swisstek-blue);
+}
+
+/* Error Message */
+.error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--swisstek-accent);
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.error-message i {
+    margin-right: 0.5rem;
+}
+
+/* Metrics Cards */
+.metric-card {
+    border-radius: 8px;
+    padding: 1rem;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+.metric-card:hover {
+    transform: translateY(-3px);
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--swisstek-dark);
+}
+
+.metric-title {
+    font-size: 0.9rem;
+    color: var(--swisstek-gray);
+    font-weight: 500;
+}
+
+.metric-icon {
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+/* Chart Container */
+#chartContainer {
+    height: 300px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sales-container {
+        padding: 1rem;
+    }
+    
+    .metric-card {
+        margin-bottom: 1rem;
+    }
+}

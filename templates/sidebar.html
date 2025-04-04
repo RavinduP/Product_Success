@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/sidebar/sidebar.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-branding">
+            <img src="../resource/img/R.png" alt="Swisstek Logo">
+        </div>
+        <nav class="nav-links">
+            <button class="nav-tab" data-tab="dashboard" onclick="location.href='./dashboard.html'">
+                HOME
+            </button>
+            
+            <div class="dropdown functions-dropdown">
+                <button class="nav-tab dropdown-btn" data-tab="functions">
+                    Analytics
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./production.html">Defects Analysis</a>
+                    <a href="./market.html">Sales Tracking</a>
+                    <a href="./campaign.html">Marketing</a>
+                    <a href="./sentiment.html">Customer Sentiment</a>
+                </div>
+            </div>
+
+            <button class="nav-tab" data-tab="about">
+                ABOUT US
+            </button>
+
+        </nav>
+        <div class="nav-contact">
+            <div class="hotline">HOTLINE <span>0334 930 590</span></div>
+            <button class="nav-logout" onclick="logout()">
+                LOGOUT
+            </button>
+        </div>
+    </div>
+
+    <script src="../static/sidebar/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+:root {
+    --swisstek-blue: #005fae;
+    --swisstek-dark: #1a2930;
+    --swisstek-accent: #e74c3c;
+    --swisstek-light: #f5f7fa;
+    --swisstek-green: #27ae60;
+    --swisstek-black: #000000;
+    --swisstek-hover: #ce6559;
+    --swisstek-gray: #e0e0e0;
+}
+
+body {
+    background-image: url('../../resource/img/bg3.png');
+}
+
+.campaign-container {
+    margin-top: 100px;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    padding: 0.1rem;
+    background: var(--swisstek-dark);
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.title h2 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Form Layout */
+.campaign-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-columns {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-column {
+    flex: 1;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+    width: 17rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--swisstek-dark);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--swisstek-gray);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--swisstek-blue);
+    box-shadow: 0 0 0 2px rgba(0, 95, 174, 0.2);
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+    width: 35.5%;
+}
+
+.error {
+    color: var(--swisstek-accent);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1rem;
+}
+
+/* Button Styles */
+.form-actions {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+
+.submit-btn  {
+    background: none;
+    border: 1px solid var(--swisstek-accent);
+    color: var(--swisstek-accent);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.submit-btn:hover {
+    background-color: var(--swisstek-accent);
+    color: white;
+}
+
+/* Results Section */
+.prediction-result {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.prediction-result strong {
+    color: var(--swisstek-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-columns {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .campaign-container {
+        padding: 1rem;
+    }
+    
+    .gradient-bar {
+        width: 80%;
+    }
+}
+
+/* Add these styles to your existing CSS file */
+
+.campaign-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 300px;
+}
+
+.campaign-form {
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 0; /* Remove the previous margin */
+}
+
+.prediction-result {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: sticky;
+    top: 120px; /* Account for navbar */
+    min-height: 400px;
+}
+
+.result-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--swisstek-dark);
+    opacity: 0.7;
+    text-align: center;
+}
+
+/* Result card styles */
+.result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.result-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.result-label {
+    font-weight: 600;
+    color: var(--swisstek-dark);
+}
+
+.result-value {
+    font-size: 1.1rem;
+}
+
+.highlight {
+    color: var(--swisstek-blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.probability-breakdown {
+    margin-top: 1rem;
+}
+
+.probability-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.probability-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.probability-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.probability-bar {
+    height: 8px;
+    background-color: var(--swisstek-blue);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.probability-value {
+    font-size: 0.9rem;
+    color: var(--swisstek-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .campaign-content {
+        flex-direction: column;
+    }
+    
+    .prediction-result {
+        width: 100%;
+        position: static;
+        min-height: auto;
+    }
+}
