@@ -1,0 +1,428 @@
+:root {
+    --swisstek-blue: #005fae;
+    --swisstek-dark: #1a2930;
+    --swisstek-accent: #e74c3c;
+    --swisstek-light: #f5f7fa;
+    --swisstek-green: #27ae60;
+    --swisstek-black: #000000;
+    --swisstek-hover: #ce6559;
+    --swisstek-gray: #e0e0e0;
+}
+
+.sentiment-container {
+    margin-top: 100px;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url('../../resource/img/bg3.png');
+}
+
+.title {
+    padding: 0.1rem;
+    background-color: var(--swisstek-dark);
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.title h2 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1400px;
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+/* Upload Card */
+.upload-card {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+    background-color: var(--swisstek-accent);
+    color: white;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.drop-area {
+    border: 2px dashed var(--swisstek-gray);
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.drop-area.highlight {
+    border-color: var(--swisstek-dark);
+}
+
+.drop-area i {
+    font-size: 2rem;
+    color: var(--swisstek-dark);
+    margin-bottom: 1rem;
+}
+
+.drop-area p {
+    margin: 0.5rem 0 1.5rem;
+    color: var(--swisstek-dark);
+}
+
+.browse-btn  {
+    background: none;
+    border: 1px solid var(--swisstek-accent);
+    color: var(--swisstek-accent);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.browse-btn:hover{
+    background-color: var(--swisstek-accent);
+    color: white;
+}
+
+.file-preview {
+    display: none;
+    margin-top: 1rem;
+    border: 1px solid var(--swisstek-gray);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.file-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.file-remove {
+    color: var(--swisstek-accent);
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: var(--swisstek-gray);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--swisstek-blue);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.analyze-btn  {
+    margin-top: 1.5rem;
+    background: none;
+    border: 1px solid var(--swisstek-accent);
+    color: var(--swisstek-accent);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.analyze-btn:hover {
+    background-color: var(--swisstek-accent);
+    color: white;
+}
+
+.analyze-btn:disabled {
+    background-color: var(--swisstek-gray);
+    color: var(--swisstek-light);
+    cursor: not-allowed;
+    border: none;
+}
+
+.spinner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner i {
+    margin-right: 0.5rem;
+}
+
+/* Results Card */
+.results-card {
+    flex: 2;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: none;
+}
+
+.results-card .card-header {
+    background-color: white;
+}
+
+.summary-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: var(--swisstek-gray);
+}
+
+
+.summary-placeholder p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.summary-results {
+    display: none;
+}
+
+.summary-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 0 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.positive {
+    background-color: rgba(39, 174, 96, 0.1);
+    color: var(--swisstek-green);
+}
+
+.neutral {
+    background-color: rgba(158, 158, 158, 0.1);
+    color: var(--swisstek-dark);
+}
+
+.negative {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--swisstek-accent);
+}
+
+.summary-details {
+    background-color: var(--swisstek-light);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.summary-details h4 {
+    margin-top: 0;
+    color: var(--swisstek-dark);
+}
+
+.summary-details ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+}
+
+.chart-container {
+    height: 250px;
+    margin-bottom: 1.5rem;
+}
+
+.sample-container {
+    margin-top: 1.5rem;
+}
+
+.sample-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.sample-item {
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: white;
+    border-left: 4px solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sample-item.positive {
+    border-color: var(--swisstek-green);
+}
+
+.sample-item.neutral {
+    border-color: var(--swisstek-gray);
+}
+
+.sample-item.negative {
+    border-color: var(--swisstek-accent);
+}
+
+.sample-sentiment {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.sample-text {
+    font-style: italic;
+    color: var(--swisstek-dark);
+}
+
+.download-btn {
+    background-color: var(--swisstek-dark);
+    color: white;
+    border: none;
+    margin-left: 75%;
+    margin-top: 2%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: var(--swisstek-accent);
+}
+
+.download-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Add to existing CSS */
+.results-card {
+    display: block; /* Changed from 'none' to show initially */
+}
+
+.analyzing-state {
+    position: relative;
+}
+
+.analyzing-state::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.analyzing-state::before {
+    content: "Analyzing...";
+    position: absolute;
+    z-index: 11;
+    color: var(--swisstek-blue);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.loading-btn {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading-btn .btn-text {
+    visibility: hidden;
+}
+
+.loading-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .upload-card,
+    .results-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sentiment-container {
+        padding: 1rem;
+    }
+    
+    .summary-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .sample-items {
+        grid-template-columns: 1fr;
+    }
+}

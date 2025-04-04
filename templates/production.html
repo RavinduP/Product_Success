@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Analytics Dashboard</title>
+    <link href="../static/sidebar/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/production_yield/production.css">
+</head>
+<body>
+    <div class="sidebar-container"></div>
+
+    <div class="defect-container">
+
+        <div class="title"><h2>Defect Predictor</h2></div> 
+
+        <div class="content-wrapper">
+            <div id="product-panel" class="product-panel">
+                <div class="product-panel-header">
+                    <h3>Select a product</h3>
+                </div>  
+                <div class="product-panel-content">
+                    <div class="product-item">Aluminum Doors</div>
+                    <div class="product-item">Aluminum Windows</div>
+                    <div class="product-item has-subitems">
+                        <span>Aluminum Ladders</span>
+                        <div class="subitems">
+                            <div class="subitem">Step Ladders</div>
+                            <div class="subitem active">Multi-purpose Ladders</div>
+                        </div>
+                    </div>
+                    <div class="product-item">Structural Frames</div>
+                </div>  
+            </div>    
+
+            <div id="defects-form" class="form-container">
+                <div class="form-content">
+                    <h2>Defects Prediction</h2>
+                    <form id="defectsForm">
+                        <div class="form-group">
+                            <label for="cutting">Cutting Quality (0=Good, 1=Bad)</label>
+                            <input type="number" id="cutting" min="0" max="1" step="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="punching">Punching Score (0=Good, 1=Bad)</label>
+                            <input type="number" id="punching" min="0" max="1" step="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inboxing">Inboxing Score (0=Good, 1=Bad)</label>
+                            <input type="number" id="inboxing" min="0" max="1" step="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hinging">Hinging Quality (0=Good, 1=Bad)</label>
+                            <input type="number" id="hinging" min="0" max="1" step="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="riveting">Riveting Quality (0=Good, 1=Bad)</label>
+                            <input type="number" id="riveting" min="0" max="1" step="1" required>
+                        </div>
+                        <button type="submit">Predict Defects</button>
+                    </form>
+                    <div id="defectsResult" class="result"></div>
+                </div>
+                <div class="form-placeholder">
+                    <p>Select a product to analyze defects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/sidebar/sidebar.js"></script>
+    <script src="../static/production_yield/production.js"></script>
+</body>
+</html>

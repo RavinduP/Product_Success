@@ -1,0 +1,13 @@
+flask
+flask-cors
+torch
+transformers
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+imbalanced-learn
+joblib
+pymongo
+xgboost

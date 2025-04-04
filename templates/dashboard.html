@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swisstek Aluminium Analytics</title>
+    <link href="../static/sidebar/sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/dashboard/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sidebar-container"></div>
+
+    <div class="dashboard-container">
+        <!-- Hero Section -->
+        <div class="hero-section animate__animated animate__fadeIn">
+            <div class="hero-content">
+                <h1>Aluminium Products Manufacturer in Sri Lanka</h1>
+                <h2>Our Quest For Perfection</h2>
+                <p>Create spaces that reflect your style and aesthetic. At Swisstek Aluminium, we believe style and sustainability go hand in hand.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">2009</div>
+                        <div class="stat-label">Established</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">600+</div>
+                        <div class="stat-label">Employees</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">1000 Mt</div>
+                        <div class="stat-label">Capacity</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../resource/img/emp.jpg" alt="Swisstek Factory">
+            </div>
+        </div>
+
+        <!-- Why Aluminium Section -->
+        <div class="why-aluminium animate__animated animate__fadeInUp">
+            <h2>Making The Right Choice</h2>
+            <h3>Why Choose Aluminium</h3>
+            <p>There are many reasons that Aluminium has been used in interior and exterior enhancement for many years due to its strength, sleek outer look, and distinct feel.</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h4>Design</h4>
+                    <p>Sleek modern aesthetics for any space</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛋️</div>
+                    <h4>Comfort</h4>
+                    <p>Excellent thermal insulation properties</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🛡️</div>
+                    <h4>Safety</h4>
+                    <p>Durable and secure</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h4>Value</h4>
+                    <p>Excellent price to quality ratio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Range Section -->
+        <div class="product-range animate__animated animate__fadeInUp">
+            <div class="section-header">
+                <h2>Style And Versatility</h2>
+                <h3>Our Product Range</h3>
+                <p>We offer breakthrough innovations for superior product performance that undergo stringent quality testing.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="../resource/img/alum-door.jpg" alt="Aluminium Doors">
+                    <h4>Aluminium Doors</h4>
+                    <p>Commercial, industrial and residential</p>
+                </div>
+                <div class="product-card">
+                    <img src="../resource/img/alum-window.jpg" alt="Aluminium Windows">
+                    <h4>Aluminium Windows</h4>
+                    <p>Thermally broken for efficiency</p>
+                </div>
+                <div class="product-card">
+                    <img src="../resource/img/alum-ladder.jpg" alt="Aluminium Ladders">
+                    <h4>Aluminium Ladders</h4>
+                    <p>Lightweight and durable</p>
+                </div>
+                <div class="product-card">
+                    <img src="../resource/img/alum-chair.jpg" alt="Structural Frames">
+                    <h4>Structural Frames</h4>
+                    <p>For architectural applications</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Production Dashboard -->
+        <div class="production-dashboard animate__animated animate__fadeIn">
+            <div class="section-header">
+                <h2>Production Analytics</h2>
+            </div>
+            
+            <div class="charts-row">
+                <div class="chart-container">
+                    <canvas id="productionChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="defectsChart"></canvas>
+                </div>
+            </div>
+            <div class="charts-row">
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="campaignChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/sidebar/sidebar.js"></script>
+    <script src="../static/dashboard/dashboard.js"></script>
+</body>
+</html>
