@@ -11,20 +11,15 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 model_weights_path = os.path.abspath(os.path.join(current_dir, '../../models/market_demand/ladder_ensemble.joblib'))
 EXCEL_PATH = os.path.abspath(os.path.join(current_dir, '../../data/market_demand/Ladders_data.xlsx'))
 
-print("\n=== Initializing Market Demand Predictor ===")
-print(f"Model path: {model_weights_path}")
-print(f"Excel path: {EXCEL_PATH}")
+print("\n=== Market Demand Predictor ===")
 print(f"Model exists: {os.path.exists(model_weights_path)}")
 print(f"Excel exists: {os.path.exists(EXCEL_PATH)}\n")
-
 
 try:
     if not os.path.exists(model_weights_path):
         raise FileNotFoundError(f"Model file not found at {model_weights_path}")
     
     model = joblib.load(model_weights_path)
-    print("✓ Model loaded successfully")
-    print(f"Model type: {type(model)}")
     
     # Verify model has required methods
     if not hasattr(model, 'predict'):
@@ -44,12 +39,7 @@ try:
         df = pd.read_excel(EXCEL_PATH, sheet_name='Data', engine='openpyxl')
     except Exception as e:
         print(f"Openpyxl failed, trying xlrd: {str(e)}")
-        df = pd.read_excel(EXCEL_PATH, sheet_name='Data', engine='xlrd')
-    
-    print("\n✓ Excel data loaded successfully")
-    print(f"Data shape: {df.shape}")
-    print(f"Columns: {df.columns.tolist()}")
-    
+        df = pd.read_excel(EXCEL_PATH, sheet_name='Data', engine='xlrd')    
     
     # Date handling
     df['Date'] = pd.to_datetime(df['Billing Date'], errors='coerce')
@@ -60,12 +50,6 @@ try:
     
     df = df.sort_values('Date')
 
-    print("\n=== Initializing Market Demand Predictor ===")
-    print(f"Model path: {model_weights_path}")
-    print(f"Excel path: {EXCEL_PATH}")
-    print(f"Model exists: {os.path.exists(model_weights_path)}")
-    print(f"Excel exists: {os.path.exists(EXCEL_PATH)}\n")
-    
     # Date features
     df['Year'] = df['Date'].dt.year
     df['Month'] = df['Date'].dt.month
@@ -92,9 +76,7 @@ try:
     # Available options
     available_regions = sorted(df["Sales Region"].unique())
     available_sizes = sorted(df["Size"].unique())
-    
-    print(f"\nAvailable regions: {available_regions}")
-    print(f"Available sizes: {available_sizes}")
+
     
 except Exception as e:
     print(f"✗ Data loading failed: {str(e)}")
@@ -115,11 +97,6 @@ def market_page():
 
 @market_bp.route('/predict', methods=['POST'])
 def predict():
-    print("Predict endpoint hit!") 
-    """Handle prediction requests"""
-    print("\n=== New Prediction Request ===")
-    print(f"Model status: {'LOADED' if model else 'MISSING'}")
-    print(f"Data status: {'LOADED' if df is not None else 'MISSING'}")
     
     try:
         # Validate service availability
@@ -162,7 +139,6 @@ def predict():
             'status': 'success'
         }
         
-        print("✓ Prediction successful")
         return jsonify(result)
         
     except Exception as e:
@@ -255,7 +231,3 @@ def generate_sales_forecast(model, df, forecast_start_date, forecast_end_date,
         print(f"Forecast generation failed: {str(e)}")
         raise
         
-        
-    except Exception as e:
-        print(f"Forecast generation failed: {str(e)}")
-        raise

@@ -19,6 +19,9 @@ model.eval()
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_weights_path = os.path.join(current_dir, '../../models/sentiment')  
 
+print("\n=== Sentiment Predictor ===")
+print(f"Model exists: {os.path.exists(model_weights_path)}")
+
 # ✅ Connect to MongoDB
 MONGO_URI = "mongodb://localhost:27017"  
 client = MongoClient(MONGO_URI)
@@ -62,8 +65,7 @@ def predict_sentiment(text):
         logits = outputs.logits
         preds = torch.argmax(logits, dim=-1).item()
 
-    # Corrected sentiment mapping for twitter-roberta-base-sentiment
-    # This model only has 3 classes (0: Negative, 1: Neutral, 2: Positive)
+    # sentiment mapping 
     sentiment_map = {0: "Negative", 1: "Neutral", 2: "Positive"}
     return sentiment_map[preds]
 

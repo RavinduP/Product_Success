@@ -3,23 +3,16 @@ import pandas as pd
 import joblib
 from flask import Blueprint, request, jsonify
 
-# Create Blueprint for API routes
-# api = Blueprint('api', __name__)
-
-# =====================
-# MODEL CONFIGURATION
-# =====================
-# MODEL_PATH = "../"
-# DATA_PATH = "data/Defects_ladder.xlsx"
-
 production_bp = Blueprint('production_yield', __name__)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_weights_path = os.path.abspath(os.path.join(current_dir, '../../models/production_yield/defects_model.pkl'))
 EXCEL_PATH = os.path.abspath(os.path.join(current_dir, '../../data/market_demand/Defects_ladder.xlsx'))
 
-# Initialize model
-# defects_model = DefectsModel(data_path=EXCEL_PATH, model_path=model_weights_path)
+print("\n=== Defect Predictor ===")
+print(f"Model exists: {os.path.exists(model_weights_path)}")
+print(f"Excel exists: {os.path.exists(EXCEL_PATH)}\n")
+
 
 # Load the model
 try:

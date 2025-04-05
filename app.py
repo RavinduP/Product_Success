@@ -2,7 +2,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 
-# nethma's
 from routes.sentiment.sent_analyse import sentiment_bp 
 from routes.market_demand.market import market_bp 
 from routes.marketing_campaign.campaign import campaign_bp
@@ -16,10 +15,9 @@ app.register_blueprint(market_bp, url_prefix='/market_demand')
 app.register_blueprint(campaign_bp, url_prefix='/campaign')
 app.register_blueprint(production_bp, url_prefix='/production_yield')
 
-print(app.url_map)  # Print the URL map to verify the routes
+# Print the URL map to verify the routes
+print(app.url_map)  
 
-
-# nethma's 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
