@@ -1,0 +1,154 @@
+/* static/styles.css */
+
+/* General body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #e0e5ec);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    color: #000000;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+/* Form styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Result styles */
+#result {
+    min-height: 100px;
+}
+
+.prediction-result {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.prediction-type {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+.confidence {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+.probabilities {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid #28a745;
+}
+
+.probabilities h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #495057;
+}
+
+.probabilities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.probabilities li {
+    padding: 5px 0;
+    color: #6c757d;
+}
+
+/* Status and error messages */
+.error-message {
+    color: #dc3545;
+    padding: 10px;
+    border-left: 3px solid #dc3545;
+    background-color: #f8d7da;
+    border-radius: 4px;
+}
+
+.loading {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 0.8em;
+    margin-top: 5px;
+    height: 1em;
+}
+  
+input:invalid, select:invalid {
+    border-color: #ff4444;
+}

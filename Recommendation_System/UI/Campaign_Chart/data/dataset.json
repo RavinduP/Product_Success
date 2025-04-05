@@ -1,0 +1,332 @@
+[
+  {
+    "Year":"2022",
+    "Month":"April",
+    "Sales Revenue - Physical":2445749.0299999998,
+    "Sales Revenue - Online":5198870,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":370300.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"May",
+    "Sales Revenue - Physical":11088040.8300000001,
+    "Sales Revenue - Online":6387805,
+    "Campaign Type":"Mega",
+    "Ad Budget":449650.0,
+    "Discount":0.5,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"June",
+    "Sales Revenue - Physical":8652693.6099999994,
+    "Sales Revenue - Online":1470156,
+    "Campaign Type":"Mega",
+    "Ad Budget":440738.0,
+    "Discount":0.5,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"July",
+    "Sales Revenue - Physical":6877586.5,
+    "Sales Revenue - Online":2708146,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":467785.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"August",
+    "Sales Revenue - Physical":2476605.0699999998,
+    "Sales Revenue - Online":2259632,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":468500.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"September",
+    "Sales Revenue - Physical":11853049.6699999999,
+    "Sales Revenue - Online":4593516,
+    "Campaign Type":"General",
+    "Ad Budget":379270.0,
+    "Discount":0.35,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"October",
+    "Sales Revenue - Physical":5759712.3700000001,
+    "Sales Revenue - Online":3536147,
+    "Campaign Type":"General",
+    "Ad Budget":423837.0,
+    "Discount":0.35,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"November",
+    "Sales Revenue - Physical":12831055.3699999992,
+    "Sales Revenue - Online":10594939,
+    "Campaign Type":"Mega",
+    "Ad Budget":438150.0,
+    "Discount":0.6,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2022",
+    "Month":"December",
+    "Sales Revenue - Physical":6175779.9100000001,
+    "Sales Revenue - Online":7258280,
+    "Campaign Type":"Mega",
+    "Ad Budget":365657.0,
+    "Discount":0.5,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"January",
+    "Sales Revenue - Physical":9918891.5299999993,
+    "Sales Revenue - Online":3106827,
+    "Campaign Type":"General",
+    "Ad Budget":396750.0,
+    "Discount":0.35,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"February",
+    "Sales Revenue - Physical":3820612.2400000002,
+    "Sales Revenue - Online":2126032,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":396750.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"March",
+    "Sales Revenue - Physical":3183852.8700000001,
+    "Sales Revenue - Online":1512879,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":364356.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"April",
+    "Sales Revenue - Physical":4176367.3799999999,
+    "Sales Revenue - Online":1367169,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":null,
+    "Discount":0.0,
+    "Ad Type":null
+  },
+  {
+    "Year":"2023",
+    "Month":"May",
+    "Sales Revenue - Physical":8474630.4000000004,
+    "Sales Revenue - Online":3300526,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":396750.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"June",
+    "Sales Revenue - Physical":3781854.5899999999,
+    "Sales Revenue - Online":1882026,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":396750.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"July",
+    "Sales Revenue - Physical":4814148.71,
+    "Sales Revenue - Online":1892581,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":395684.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"August",
+    "Sales Revenue - Physical":3820735.1200000001,
+    "Sales Revenue - Online":1874683,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":360000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"September",
+    "Sales Revenue - Physical":5860855.6100000003,
+    "Sales Revenue - Online":1950328,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":154208.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"October",
+    "Sales Revenue - Physical":5459392.1399999997,
+    "Sales Revenue - Online":1422883,
+    "Campaign Type":"General",
+    "Ad Budget":103000.0,
+    "Discount":0.35,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"November",
+    "Sales Revenue - Physical":11078742.5399999991,
+    "Sales Revenue - Online":9193415,
+    "Campaign Type":"Influencer",
+    "Ad Budget":573333.0,
+    "Discount":0.5,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2023",
+    "Month":"December",
+    "Sales Revenue - Physical":10337237.8399999999,
+    "Sales Revenue - Online":5374869,
+    "Campaign Type":"Influencer",
+    "Ad Budget":470000.0,
+    "Discount":0.5,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"January",
+    "Sales Revenue - Physical":7468986.04,
+    "Sales Revenue - Online":2128711,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":173280.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"February",
+    "Sales Revenue - Physical":9160692.6500000004,
+    "Sales Revenue - Online":2267794,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":149000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"March",
+    "Sales Revenue - Physical":8902356.2200000007,
+    "Sales Revenue - Online":3122902,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":177620.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"April",
+    "Sales Revenue - Physical":4912927.6100000003,
+    "Sales Revenue - Online":2831089,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":190000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"May",
+    "Sales Revenue - Physical":6667697.3899999997,
+    "Sales Revenue - Online":2875495,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":235897.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"June",
+    "Sales Revenue - Physical":7507286.4900000002,
+    "Sales Revenue - Online":1782328,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":200000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"July",
+    "Sales Revenue - Physical":10529899.8699999992,
+    "Sales Revenue - Online":1628826,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":null,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"August",
+    "Sales Revenue - Physical":10195499.6899999995,
+    "Sales Revenue - Online":1892674,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":null,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"September",
+    "Sales Revenue - Physical":8759170.7200000007,
+    "Sales Revenue - Online":1809218,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":null,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"October",
+    "Sales Revenue - Physical":5442266.54,
+    "Sales Revenue - Online":2076021,
+    "Campaign Type":"Influencer",
+    "Ad Budget":450000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"November",
+    "Sales Revenue - Physical":6809198.0999999996,
+    "Sales Revenue - Online":5371941,
+    "Campaign Type":"Influencer",
+    "Ad Budget":497000.0,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  },
+  {
+    "Year":"2024",
+    "Month":"December",
+    "Sales Revenue - Physical":8451405.7400000002,
+    "Sales Revenue - Online":1447855,
+    "Campaign Type":"No Campaign",
+    "Ad Budget":null,
+    "Discount":0.0,
+    "Ad Type":"Daraz, Facebook, Instagram"
+  }
+]

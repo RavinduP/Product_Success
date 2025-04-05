@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Performance Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.1/dist/chartjs-plugin-annotation.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Campaign Performance Overview</h1>
+        <!-- First Chart for Ad Budget vs Revenue -->
+        <div class="chart-container" style="height: 600px; width: 100%;">
+            <canvas id="budgetRevenueChart"></canvas>
+        </div>
+
+        <!-- Second Chart for Seasonal Trends -->
+        <div class="chart-container" style="height: 600px; width: 100%; margin-top: 50px;">
+            <canvas id="seasonalTrendChart"></canvas>
+        </div>
+    </div>
+    <script src="js/campaignChart.js"></script>
+    <script src="js/seasonalTrendChart.js"></script>
+</body>
+</html>
