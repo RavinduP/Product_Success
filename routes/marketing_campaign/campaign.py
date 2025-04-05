@@ -19,6 +19,9 @@ model = joblib.load(model_path)
 encoder = joblib.load(encoder_path)
 scaler = joblib.load(scaler_path)
 
+print("\n=== Campaign Predictor ===")
+print(f"Model exists: {os.path.exists(model_path)}")
+
 @campaign_bp.route('/')
 def campaign_page():
     return render_template('campaign.html')  # Render the HTML form
