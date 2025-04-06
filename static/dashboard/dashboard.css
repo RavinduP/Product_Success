@@ -33,23 +33,23 @@
 .hero-content h1 {
     font-size: 2.5rem;
     color: var(--swisstek-dark);
-    margin-bottom: 1rem;
     line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
 .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--swisstek-accent);
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .hero-stats {
@@ -75,7 +75,7 @@
 
 .stat-label {
     font-size: 0.9rem;
-    color: #666;
+    color: black;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -331,7 +331,131 @@
     margin-top: 1.5rem;
 }
 
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--swisstek-accent) }
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--swisstek-accent);
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* Chart navigation */
+.charts-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.chart-nav-btn {
+    background: var(--swisstek-blue);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.chart-nav-btn:hover {
+    background: var(--swisstek-dark);
+    transform: scale(1.1);
+}
+
+.chart-nav-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Horizontal charts layout */
+.charts-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    scrollbar-width: none;
+}
+
+.charts-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chart-slide {
+    min-width: calc(50% - 0.75rem);
+    scroll-snap-align: start;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 0;
+    height: 400px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chart-slide {
+        min-width: 100%;
+        flex-direction: column;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+}
+
+/* Animation for h2 and p */
+.delayed-show {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 3.5s; /* After typing animation completes */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust hero section layout */
+.hero-content {
+  position: relative;
+}
+
+/* Adjust chart container for new layout */
+.chart-container {
+  min-width: 100%;
+  height: 400px;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {

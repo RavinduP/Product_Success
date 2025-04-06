@@ -1,0 +1,213 @@
+:root {
+    --swisstek-blue: #005fae;
+    --swisstek-dark: #1a2930;
+    --swisstek-accent: #e74c3c;
+    --swisstek-light: #f5f7fa;
+    --swisstek-green: #27ae60;
+    --positive: #27ae60;
+    --neutral: #f1c40f;
+    --negative: #e74c3c;
+}
+
+body {
+    background-image: url('../../resource/img/bg3.png');
+}
+
+.about-container {
+    margin-top: 100px;
+    padding: 4rem 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: var(--swisstek-accent);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.about-header .subtitle {
+    font-size: 1.5rem;
+    color: var(--swisstek-dark);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.predictors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.predictor-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.predictor-card.animate__animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.predictor-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.predictor-card h3 {
+    font-size: 1.5rem;
+    color: var(--swisstek-dark);
+    margin-bottom: 1rem;
+}
+
+.predictor-card p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.card-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    color: var(--swisstek-blue);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.about-footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: var(--swisstek-light);
+    border-radius: 12px;
+}
+
+.about-footer h2 {
+    font-size: 2rem;
+    color: var(--swisstek-dark);
+    margin-bottom: 1rem;
+}
+
+.about-footer p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.predictors-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.predictor-pair {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.predictor-card {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    opacity: 0;
+}
+
+.predictor-card.animate__animated {
+    opacity: 1;
+}
+
+/* Animation delays for staggered effect */
+.predictor-pair:nth-child(1) .animate__fadeInLeft {
+    animation-delay: 0.2s;
+}
+.predictor-pair:nth-child(1) .animate__fadeInRight {
+    animation-delay: 0.4s;
+}
+.predictor-pair:nth-child(2) .animate__fadeInLeft {
+    animation-delay: 0.6s;
+}
+.predictor-pair:nth-child(2) .animate__fadeInRight {
+    animation-delay: 0.8s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .predictor-pair {
+        flex-direction: column;
+    }
+    
+    .predictor-card {
+        width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 2rem 1rem;
+    }
+    
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .predictors-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .predictor-card {
+        padding: 1.5rem;
+    }
+}

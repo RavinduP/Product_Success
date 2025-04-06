@@ -45,6 +45,7 @@ body {
 .input-group {
     margin-bottom: 20px;
     text-align: left;
+    width: 23rem;
 }
 
 .input-group label {
