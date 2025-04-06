@@ -73,7 +73,6 @@ try:
     }
     df["Sales Region"] = df["Sales Region"].replace(region_mapping)
     
-    # Available options
     available_regions = sorted(df["Sales Region"].unique())
     available_sizes = sorted(df["Size"].unique())
 

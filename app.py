@@ -15,7 +15,7 @@ app.register_blueprint(market_bp, url_prefix='/market_demand')
 app.register_blueprint(campaign_bp, url_prefix='/campaign')
 app.register_blueprint(production_bp, url_prefix='/production_yield')
 
-# Print the URL map to verify the routes
+# Print the URL map --> to verify the routes
 print(app.url_map)  
 
 if __name__ == '__main__':
