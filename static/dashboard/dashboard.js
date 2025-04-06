@@ -1,3 +1,99 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Typing animation for h1
+    const heroTitle = document.querySelector('.hero-content h1');
+    const originalText = heroTitle.textContent;
+    heroTitle.innerHTML = `<span class="typing-animation">${originalText}</span>`;
+    
+    // Add delayed-show class to h2 and p
+    document.querySelector('.hero-content h2').classList.add('delayed-show');
+    document.querySelector('.hero-content p').classList.add('delayed-show');
+    
+    // Initialize all charts
+    initProductionChart();
+    initDefectsChart();
+    initSentimentChart();
+    initCampaignChart();
+    
+    // Initialize chart navigation
+    initChartNavigation();
+    
+    // Animate stats
+    animateStats();
+});
+
+// Add this function to handle chart navigation
+function initChartNavigation() {
+    const container = document.getElementById('chartsContainer');
+    const prevBtn = document.getElementById('prevChart');
+    const nextBtn = document.getElementById('nextChart');
+    const slides = document.querySelectorAll('.chart-slide');
+    let currentSlide = 0;
+    
+    // Add Font Awesome for icons (if not already loaded)
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+        const faLink = document.createElement('link');
+        faLink.rel = 'stylesheet';
+        faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+        document.head.appendChild(faLink);
+    }
+    
+    function updateButtons() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+    }
+    
+    function goToSlide(index) {
+        currentSlide = index;
+        const scrollAmount = container.clientWidth * currentSlide;
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+        updateButtons();
+    }
+    
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            goToSlide(currentSlide - 1);
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) {
+            goToSlide(currentSlide + 1);
+        }
+    });
+    
+    // Handle swipe on touch devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    container.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    container.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50 && currentSlide < slides.length - 1) {
+            goToSlide(currentSlide + 1); // Swipe left
+        }
+        if (touchEndX > touchStartX + 50 && currentSlide > 0) {
+            goToSlide(currentSlide - 1); // Swipe right
+        }
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        goToSlide(currentSlide);
+    });
+    
+    updateButtons();
+}
+
 // Animate statistics numbers
 function animateStats() {
     const statValues = document.querySelectorAll('.stat-value');
