@@ -215,7 +215,7 @@ button[type="submit"]:hover {
 }
 
 .result.bad {
-    background-color: var(--swisstek-accent);
+    background-color: red;
     color: white;
 }
 

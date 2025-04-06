@@ -16,7 +16,7 @@
         <!-- Hero Section -->
         <div class="hero-section animate__animated animate__fadeIn">
             <div class="hero-content">
-                <h1>Aluminium Products Manufacturer in Sri Lanka</h1>
+                <h1>Aluminium Products Manufacturer<br> in Sri Lanka</h1>
                 <h2>Our Quest For Perfection</h2>
                 <p>Create spaces that reflect your style and aesthetic. At Swisstek Aluminium, we believe style and sustainability go hand in hand.</p>
                 <div class="hero-stats">
@@ -107,21 +107,35 @@
                 <h2>Production Analytics</h2>
             </div>
             
-            <div class="charts-row">
-                <div class="chart-container">
-                    <canvas id="productionChart"></canvas>
+            <div class="charts-container" id="chartsContainer">
+                <!-- Slide 1 -->
+                <div class="chart-slide">
+                    <div class="chart-container">
+                        <canvas id="productionChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="defectsChart"></canvas>
+                    </div>
                 </div>
-                <div class="chart-container">
-                    <canvas id="defectsChart"></canvas>
+                
+                <!-- Slide 2 -->
+                <div class="chart-slide">
+                    <div class="chart-container">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="campaignChart"></canvas>
+                    </div>
                 </div>
             </div>
-            <div class="charts-row">
-                <div class="chart-container">
-                    <canvas id="sentimentChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <canvas id="campaignChart"></canvas>
-                </div>
+            
+            <div class="charts-navigation">
+                <button class="chart-nav-btn" id="prevChart" title="Previous">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="chart-nav-btn" id="nextChart" title="Next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </div>
